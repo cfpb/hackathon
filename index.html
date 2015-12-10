@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% capture index %}{% include index.md %}{% endcapture %}
+{{ index | markdownify }}
+
+<section id="projects">
+  <h2>Proposed Projects</h2>
+  <ul id="project-list">
+  </ul>
+</section>
+
+<script type="text/javascript">
+getProposeProjects();
+</script>
