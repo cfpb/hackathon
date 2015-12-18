@@ -13,13 +13,35 @@ function getJSON(url, callback) {
     request.send(null);
 }
 
-function getProposeProjects() {
-    var url = "https://api.github.com/repos/cfpb/hackathon/issues?labels=project";
-    getJSON(url, function(issues) {
+
+function getGitHubIssuesWithLabel(label, callback) {
+    var url = 'https://api.github.com/repos/cfpb/hackathon/issues?labels=' + label;
+    getJSON(url, callback);
+}
+
+
+function getProposedProjects() {
+    getGitHubIssuesWithLabel('project', function(issues) {
         var projects_elm = document.querySelector('#project-list');
         issues.forEach(function(issue) {
+            console.log(issue);
             var issue_elm = document.createElement('li');
-            issue_elm.innerHTML = '<a href="' + issue.html_url + '">' + issue.title + '</a>';
+            issue_elm.innerHTML = '<a href="' + issue.html_url + '">' + issue.title + '</a>: '
+              + '<a href="' + issue.html_url + '#new_comment_field">Leave a comment to volunteer</a>';
+            projects_elm.appendChild(issue_elm);
+        });
+    });
+}
+
+
+function getProposedWorkshops() {
+    getGitHubIssuesWithLabel('workshop', function(issues) {
+        var projects_elm = document.querySelector('#workshop-list');
+        issues.forEach(function(issue) {
+            console.log(issue);
+            var issue_elm = document.createElement('li');
+            issue_elm.innerHTML = '<a href="' + issue.html_url + '">' + issue.title + '</a>: '
+              + '<a href="' + issue.html_url + '#new_comment_field">Leave a comment to join</a>';
             projects_elm.appendChild(issue_elm);
         });
     });
