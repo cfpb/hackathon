@@ -32,7 +32,7 @@ logoalt: CFPB
 # List links that should appear in the site sidebar here
 navigation:
 - text: Projects
-  url: ./
+  url: ./projects
   internal: true
 - text: Workshops
   url: ./workshops
