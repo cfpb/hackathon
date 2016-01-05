@@ -31,9 +31,16 @@ logoalt: CFPB
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
-- text: Home
+- text: Projects
   url: ./
   internal: true
+- text: Workshops
+  url: ./workshops
+  internal: true
+- text: Code of Conduct
+  url: ./code-of-conduct
+  internal: true
+
 
 # Style Variables
 brand_color: "#2cb34a"

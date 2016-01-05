@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% capture index %}{% include index.md %}{% endcapture %}
+{{ index | markdownify }}
+
+<section id="projects">
+  <h2>Proposed Workshops</h2>
+  <p>Choose a workshop to attend during the Hack Day.</p>
+
+  <ul id="workshop-list">
+  </ul>
+  <p>
+    <a href="https://github.com/cfpb/hackathon/issues/new?labels=workshop">Propose a new Workshop</a>
+  </p>
+
+</section>
+
+<script type="text/javascript">
+getProposedWorkshops();
+</script>

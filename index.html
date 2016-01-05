@@ -5,24 +5,10 @@ layout: default
 {% capture index %}{% include index.md %}{% endcapture %}
 {{ index | markdownify }}
 
-<section id="projects">
-  <h2>Proposed Projects</h2>
-  <ul id="project-list">
-  </ul>
-  <p>
-    <a href="https://github.com/cfpb/hackathon/issues/new?labels=project">Propose a new Project</a>
-  </p>
+<section>
+  <h2>CFPB Hack Day</h2>
 
-  <h2>Proposed Workshops</h2>
-  <ul id="workshop-list">
-  </ul>
-  <p>
-    <a href="https://github.com/cfpb/hackathon/issues/new?labels=workshop">Propose a new Workshop</a>
-  </p>
+  <h3>Wednesday, January 27, 2016, 9 AM-5 PM</h3>
+  <p><a href="projects">Join a project</a>, <a href="https://github.com/cfpb/hackathon/issues/new?labels=project">propose your own project</a>, or <a href="workshops">attend a workshop</a>.</p>
 
 </section>
-
-<script type="text/javascript">
-getProposedProjects();
-getProposedWorkshops();
-</script>
