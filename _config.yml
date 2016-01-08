@@ -34,9 +34,6 @@ navigation:
 - text: Projects
   url: ./projects
   internal: true
-- text: Workshops
-  url: ./workshops
-  internal: true
 - text: Code of Conduct
   url: ./code-of-conduct
   internal: true
