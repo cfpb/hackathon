@@ -31,6 +31,9 @@ logoalt: CFPB
 # Navigation
 # List links that should appear in the site sidebar here
 navigation:
+- text: Schedule
+  url: ./schedule
+  internal: true
 - text: Projects
   url: ./projects
   internal: true
